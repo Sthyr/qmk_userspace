@@ -84,6 +84,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+// Chordal Hold: mano de cada tecla. '*' = exenta: los pulgares (Ctrl y capas)
+// se pueden combinar con teclas de la misma mano (C-x, Espacio+F1, Enter+$...).
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
+    'L', 'L', 'L', 'L', 'L', 'L',     'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',     'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',     'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',     'R', 'R', 'R', 'R', 'R', 'R',
+                   '*', '*', '*',     '*', '*', '*'
+);
+
 // Combos: dos teclas a la vez producen otra (para no usar el meñique)
 const uint16_t PROGMEM combo_esc[]  = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM combo_acut[] = {KC_COMM, KC_DOT, COMBO_END};

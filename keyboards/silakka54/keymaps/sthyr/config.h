@@ -3,10 +3,12 @@
 
 #pragma once
 
-// Tap-hold (home row mods y teclas de capa en los pulgares)
-#define TAPPING_TERM 170
-// En Vial: Permissive Hold, Hold On Other Key Press, Retro Tapping,
-// Chordal Hold y Flow Tap estaban desactivados, igual que el valor por defecto de QMK.
+// Tap-hold (home row mods, Ctrl y teclas de capa en los pulgares)
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD   // mod + tecla tocada y soltada dentro del mod = hold
+#define CHORDAL_HOLD      // los mods solo se activan con la mano contraria
+                          // (los pulgares están exentos: chordal_hold_layout en keymap.c)
+#define FLOW_TAP_TERM 150 // al escribir rápido, las teclas tap-hold se resuelven como tap
 
 // NKRO activado por defecto (en Vial estaba activo en "Magic")
 #define NKRO_DEFAULT_ON true
