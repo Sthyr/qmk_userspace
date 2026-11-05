@@ -9,7 +9,7 @@ layers:
     - {t: S, h: Shift}
     - T
     - {t: G, h: Meh}
-    - M
+    - {t: M, h: Números}
     - N
     - {t: E, h: Shift}
     - {t: I, h: Alt}
@@ -21,7 +21,7 @@ layers:
     - {t: ⇥, h: Ctrl}
     - {t: ⏎, h: Símbolos}
     - ⌫
-    - {t: Supr, h: Números}
+    - Supr
   Navegación:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -108,7 +108,7 @@ layers:
     - '5'
     - '6'
     - +
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -131,7 +131,7 @@ layers:
     - .
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
+    - {t: ▽, type: trans}
   Símbolos:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}

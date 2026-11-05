@@ -18,13 +18,13 @@ enum layers {
 #define HM_E    RSFT_T(KC_E)     // E al tocar, Shift al mantener
 #define HM_I    LALT_T(KC_I)     // I al tocar, Alt al mantener
 #define HM_O    RGUI_T(KC_O)     // O al tocar, Super al mantener
+#define M_NUM   LT(_NUM, KC_M)   // M al tocar, Números al mantener
 
 // Pulgares: tecla al tocar, capa (o Ctrl) al mantener
 #define ESC_MOU LT(_MOUSE, KC_ESC)
 #define SPC_NAV LT(_NAV, KC_SPC)
 #define TAB_CTL LCTL_T(KC_TAB)   // Tab al tocar, Ctrl al mantener
 #define ENT_SYM LT(_SYM, KC_ENT)
-#define DEL_NUM LT(_NUM, KC_DEL)
 
 // Tecla \ de un teclado US. En Linux equivale a la tecla ISO que usa ES_RCBR,
 // así que con distribución latinoamericana da los mismos símbolos.
@@ -41,9 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
-        TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          KC_M,      KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
+        TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          M_NUM,     KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
-                                         ESC_MOU,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
+                                         ESC_MOU,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
     ),
     // Navegación (mantener Espacio): F1-F12, flechas y bootloader
     [_NAV] = LAYOUT(
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      _______, _______, _______, _______, _______, _______,
                                    _______, _______, _______,     _______, _______, _______
     ),
-    // Números (mantener Supr)
+    // Números (mantener M)
     [_NUM] = LAYOUT(
         KC_NUM,  _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______,
         _______, _______, KC_7,    KC_8,    KC_9,    KC_PEQL,     _______, _______, _______, _______, _______, _______,
