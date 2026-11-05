@@ -19,6 +19,7 @@ enum layers {
 #define HM_I    LALT_T(KC_I)     // I al tocar, Alt al mantener
 #define HM_O    RGUI_T(KC_O)     // O al tocar, Super al mantener
 #define M_NUM   LT(_NUM, KC_M)   // M al tocar, Números al mantener
+#define T_MOU   LT(_MOUSE, KC_T) // T al tocar, Mouse al mantener
 
 // Pulgares: tecla al tocar, capa (o Ctrl) al mantener
 #define SPC_NAV LT(_NAV, KC_SPC)
@@ -40,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
-        TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          M_NUM,     KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
+        TG(_GAME), HM_A,      HM_R,      HM_S,      T_MOU,     HM_G,          M_NUM,     KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
                                          KC_ESC,    SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
     ),
@@ -68,11 +69,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, ES_DQUO, ES_QUOT, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, K_GRV,   _______,
                                    _______, ES_MINS, ES_UNDS,     _______, _______, _______
     ),
-    // Mouse y multimedia (combo H + , para activar y desactivar)
+    // Mouse y multimedia (mantener T, o combo H + , para fijarla)
     [_MOUSE] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,   _______,       _______,   _______,   _______,   _______,   _______,   _______,
         _______,   _______,   _______,   _______,   KC_MPLY,   KC_VOLU,       MS_BTN5,   MS_WHLL,   MS_WHLD,   MS_WHLU,   MS_WHLR,   _______,
-        _______,   _______,   _______,   KC_MSTP,   KC_MUTE,   KC_VOLD,       MS_BTN4,   MS_LEFT,   MS_DOWN,   MS_UP,     MS_RGHT,   _______,
+        _______,   _______,   KC_MUTE,   KC_MSTP,   _______,   KC_VOLD,       MS_BTN4,   MS_LEFT,   MS_DOWN,   MS_UP,     MS_RGHT,   _______,
         _______,   _______,   _______,   MS_ACL0,   MS_ACL1,   MS_ACL2,       _______,   _______,   _______,   _______,   _______,   _______,
                                          _______,   _______,   _______,       MS_BTN1,   MS_BTN2,   MS_BTN3
     ),

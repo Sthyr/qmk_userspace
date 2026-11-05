@@ -7,7 +7,7 @@ layers:
     - {t: A, h: Super}
     - {t: R, h: Alt}
     - {t: S, h: Shift}
-    - T
+    - {t: T, h: Mouse}
     - {t: G, h: Meh}
     - {t: M, h: Números}
     - N
@@ -214,9 +214,9 @@ layers:
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - ⏹
     - Mute
+    - ⏹
+    - {type: held}
     - Vol-
     - Atrás
     - Mouse ←
