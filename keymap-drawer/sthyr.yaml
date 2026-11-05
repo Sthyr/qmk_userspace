@@ -165,9 +165,9 @@ layers:
     - )
     - +
     - '*'
-    - $
+    - <
+    - '>'
     - '#'
-    - '&'
     - AltGr
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
