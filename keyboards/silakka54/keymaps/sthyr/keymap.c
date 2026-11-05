@@ -42,10 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_ACUT,   ES_ACUT,
                                          KC_LGUI,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
     ),
-    // Navegación (mantener Espacio): F1-F12 y flechas
+    // Navegación (mantener Espacio): F1-F12, flechas y TG de la capa Mouse
     [_NAV] = LAYOUT(
         _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______,
-        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,       _______, _______, _______, _______, _______, _______,
+        TG(_MOUSE), KC_F1, KC_F2,  KC_F3,   KC_F4,   KC_F5,       _______, _______, _______, _______, _______, _______,
         _______, KC_F6,   KC_LALT, KC_LSFT, KC_LCTL, KC_F7,       KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
         _______, KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      _______, _______, _______, _______, _______, _______,
                                    _______, _______, _______,     _______, _______, _______
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, ES_LBRC, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, K_GRV,   _______,
                                    _______, ES_MINS, ES_UNDS,     _______, _______, _______
     ),
-    // Mouse y multimedia (mantener Tab)
+    // Mouse y multimedia (TG desde Navegación; TO(_BASE) para salir)
     [_MOUSE] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,   _______,       _______,   _______,   _______,   _______,   _______,   _______,
         _______,   _______,   _______,   _______,   KC_MPLY,   KC_VOLU,       MS_BTN5,   MS_WHLL,   MS_WHLD,   MS_WHLU,   MS_WHLR,   _______,
