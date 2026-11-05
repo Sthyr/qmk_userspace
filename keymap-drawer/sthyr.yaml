@@ -146,7 +146,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - '@'
     - ¿
     - '?'
     - '{'
@@ -170,8 +170,8 @@ layers:
     - '#'
     - AltGr
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - '['
+    - '"'
+    - ''''
     - '='
     - '['
     - ']'
