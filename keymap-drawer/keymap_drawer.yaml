@@ -79,6 +79,8 @@ parse_config:
     K_RBRC: ']'
     K_GRV: '`'
     M_ACUTE: '´ suelta'
+    M_CIRC: '^'
+    M_GRV: '`'
     KC_NO: ''
     KC_SPC: '␣'
     KC_BSPC: '⌫'

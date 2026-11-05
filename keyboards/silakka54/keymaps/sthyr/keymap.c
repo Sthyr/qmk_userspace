@@ -34,6 +34,8 @@ enum layers {
 
 enum custom_keycodes {
     M_ACUTE = SAFE_RANGE, // Macro 0 de Vial: escribe una tilde suelta (´)
+    M_CIRC,               // ^ suelto (en latam ^ es tecla muerta)
+    M_GRV,                // ` suelto (en latam ` es tecla muerta)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -64,9 +66,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Símbolos (mantener Enter)
     [_SYM] = LAYOUT(
         _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______,
-        _______, ES_AT,   ES_IQUE, ES_QUES, ES_LCBR, K_RCBR,      M_ACUTE, ES_DLR,  ES_PERC, ES_AMPR, ES_CIRC, _______,
+        _______, ES_AT,   ES_IQUE, ES_QUES, ES_LCBR, K_RCBR,      M_ACUTE, ES_DLR,  ES_PERC, ES_AMPR, M_CIRC,  _______,
         _______, ES_TILD, ES_IEXL, ES_EXLM, ES_LPRN, ES_RPRN,     KC_PPLS, KC_PAST, ES_LABK, ES_RABK, ES_NUMB, KC_RALT,
-        _______, ES_DQUO, ES_QUOT, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, K_GRV,   _______,
+        _______, ES_DQUO, ES_QUOT, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, M_GRV,   _______,
                                    _______, ES_MINS, ES_UNDS,     _______, _______, _______
     ),
     // Mouse y multimedia (mantener T, o combo H + , para fijarla)
@@ -113,6 +115,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(ES_ACUT); // tecla muerta ´
                 tap_code(KC_SPC);  // + espacio = ´ suelta
+            }
+            return false;
+        case M_CIRC:
+            if (record->event.pressed) {
+                tap_code16(ES_CIRC); // tecla muerta ^
+                tap_code(KC_SPC);    // + espacio = ^ suelto
+            }
+            return false;
+        case M_GRV:
+            if (record->event.pressed) {
+                tap_code16(K_GRV);   // tecla muerta `
+                tap_code(KC_SPC);    // + espacio = ` suelto
             }
             return false;
     }
