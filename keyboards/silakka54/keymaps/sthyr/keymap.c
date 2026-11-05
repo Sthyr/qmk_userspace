@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
         TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          KC_M,      KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
-        KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_ACUT,   ES_ACUT,
+        KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
                                          ESC_MOU,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
     ),
     // Navegación (mantener Espacio): F1-F12, flechas y bootloader

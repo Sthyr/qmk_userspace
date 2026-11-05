@@ -15,7 +15,7 @@ layers:
     - {t: I, h: Alt}
     - {t: O, h: Super}
     - ;
-  - [Bloq, Z, X, C, D, V, K, H, ',', ., ´, ´]
+  - [Bloq, Z, X, C, D, V, K, H, ',', ., '-', ´]
   - - {t: Esc, h: Mouse}
     - {t: ␣, h: Navegación}
     - {t: ⇥, h: Ctrl}
