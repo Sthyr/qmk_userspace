@@ -19,9 +19,9 @@ enum layers {
 #define HM_E    RSFT_T(KC_E)     // E al tocar, Shift al mantener
 #define HM_I    LALT_T(KC_I)     // I al tocar, Alt al mantener
 
-// Pulgares: tecla al tocar, capa al mantener
+// Pulgares: tecla al tocar, capa (o Ctrl) al mantener
 #define SPC_NAV LT(_NAV, KC_SPC)
-#define TAB_MOU LT(_MOUSE, KC_TAB)
+#define TAB_CTL LCTL_T(KC_TAB)   // Tab al tocar, Ctrl al mantener
 #define ENT_SYM LT(_SYM, KC_ENT)
 #define DEL_NUM LT(_NUM, KC_DEL)
 
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
         TG(_GAME), KC_A,      HM_R,      HM_S,      HM_T,      HM_G,          KC_M,      HM_N,      HM_E,      HM_I,      KC_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_ACUT,   ES_ACUT,
-                                         KC_LGUI,   SPC_NAV,   TAB_MOU,       ENT_SYM,   KC_BSPC,   DEL_NUM
+                                         KC_LGUI,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
     ),
     // Navegación (mantener Espacio): F1-F12 y flechas
     [_NAV] = LAYOUT(

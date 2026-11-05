@@ -1,8 +1,9 @@
 # Configuración de keymap-drawer para el keymap sthyr (Silakka54).
 # Leyendas de los alias de la distribución latinoamericana (ES_*) y alias propios.
 parse_config:
-  # Home row mods definidos con #define en keymap.c
+  # Home row mods y mod-taps definidos con #define en keymap.c
   raw_binding_map:
+    TAB_CTL: {t: ⇥, h: Ctrl}
     HM_R: {t: R, h: Alt}
     HM_S: {t: S, h: Shift}
     HM_T: {t: T, h: Ctrl}
