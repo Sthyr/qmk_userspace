@@ -32,6 +32,13 @@ enum layers {
 #define K_RBRC  S(KC_BSLS)       // ]
 #define K_GRV   RALT(KC_BSLS)    // `
 
+// Atajos de Emacs en la capa Navegación
+#define E_MARCA C(KC_SPC)        // C-SPC: poner marca (Ctrl y Espacio comparten pulgar)
+#define E_DESH  C(ES_SLSH)       // C-/: deshacer (undo)
+#define E_REH   C(A(ES_UNDS))    // C-M-_: rehacer (undo-redo)
+#define E_TABS  C(KC_TAB)        // C-TAB: pestaña siguiente (Ctrl está en la tecla Tab)
+#define E_TABA  C(S(KC_TAB))     // C-S-TAB: pestaña anterior
+
 enum custom_keycodes {
     M_ACUTE = SAFE_RANGE, // Macro 0 de Vial: escribe una tilde suelta (´)
     M_CIRC,               // ^ suelto (en latam ^ es tecla muerta)
@@ -47,12 +54,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
                                          KC_ESC,    SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
     ),
-    // Navegación (mantener Espacio): F1-F12, flechas y bootloader
+    // Navegación (mantener Espacio): F1-F12, flechas, atajos de Emacs y bootloader
     [_NAV] = LAYOUT(
         _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, QK_BOOT,
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,       _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______,
-        _______, KC_F6,   KC_LALT, KC_LSFT, KC_LCTL, KC_F7,       _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______,
-        _______, KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      _______, _______, _______, _______, _______, _______,
+        _______, KC_F6,   KC_LALT, KC_LSFT, KC_LCTL, KC_F7,       E_MARCA, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______,
+        _______, KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      _______, E_TABA,  E_DESH,  E_REH,   E_TABS,  _______,
                                    _______, _______, _______,     _______, _______, _______
     ),
     // Números (mantener M)

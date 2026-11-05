@@ -53,7 +53,7 @@ layers:
     - Shift
     - Ctrl
     - F7
-    - {t: ▽, type: trans}
+    - {t: Marca, h: C-SPC}
     - ←
     - ↓
     - ↑
@@ -66,10 +66,10 @@ layers:
     - F11
     - F12
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: Pest ←, h: C-S-TAB}
+    - {t: Deshac, h: C-/}
+    - {t: Rehac, h: C-M-_}
+    - {t: Pest →, h: C-TAB}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {type: held}

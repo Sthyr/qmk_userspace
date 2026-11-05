@@ -4,6 +4,11 @@ parse_config:
   # Home row mods y mod-taps definidos con #define en keymap.c
   raw_binding_map:
     TAB_CTL: {t: ⇥, h: Ctrl}
+    E_MARCA: {t: Marca, h: C-SPC}
+    E_DESH: {t: Deshac, h: C-/}
+    E_REH: {t: Rehac, h: C-M-_}
+    E_TABS: {t: Pest →, h: C-TAB}
+    E_TABA: {t: Pest ←, h: C-S-TAB}
     HM_A: {t: A, h: Super}
     HM_R: {t: R, h: Alt}
     HM_S: {t: S, h: Shift}
