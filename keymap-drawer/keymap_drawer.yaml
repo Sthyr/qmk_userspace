@@ -96,6 +96,8 @@ parse_config:
     KC_LCTL: 'Ctrl'
     KC_HOME: 'Inicio'
     KC_END: 'Fin'
+    KC_PGUP: 'RePág'
+    KC_PGDN: 'AvPág'
     KC_LEFT: '←'
     KC_RGHT: '→'
     KC_UP: '↑'

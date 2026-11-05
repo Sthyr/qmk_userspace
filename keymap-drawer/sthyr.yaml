@@ -42,10 +42,10 @@ layers:
     - F4
     - F5
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - Inicio
+    - AvPág
+    - RePág
+    - Fin
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - F6
@@ -53,12 +53,12 @@ layers:
     - Shift
     - Ctrl
     - F7
-    - Inicio
+    - {t: ▽, type: trans}
     - ←
     - ↓
     - ↑
     - →
-    - Fin
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - F8
     - F9
