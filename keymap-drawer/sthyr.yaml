@@ -16,7 +16,7 @@ layers:
     - {t: O, h: Super}
     - ;
   - [Bloq, Z, X, C, D, V, K, H, ',', ., '-', ´]
-  - - {t: Esc, h: Mouse}
+  - - Esc
     - {t: ␣, h: Navegación}
     - {t: ⇥, h: Ctrl}
     - {t: ⏎, h: Símbolos}
@@ -236,7 +236,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - {type: held}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - Clic izq
@@ -300,3 +300,4 @@ layers:
 combos:
   - {p: [14, 15], k: Esc, l: [Base]}
   - {p: [44, 45], k: ´, l: [Base]}
+  - {p: [43, 44], k: Mouse, l: [Base, Mouse]}

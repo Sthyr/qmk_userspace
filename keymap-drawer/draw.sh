@@ -19,11 +19,12 @@ python3 "$DIR/keymap_prep.py" "$KEYMAP_C" "$TMP/raw.json" > "$TMP/keymap.json"
 keymap -c "$DIR/keymap_drawer.yaml" parse -q "$TMP/keymap.json" -c 12 \
     -l Base Navegación Números Símbolos Mouse Juegos > "$DIR/$KM.yaml"
 # keymap-drawer no lee los combos de keymap.c: se agregan a mano.
-# p = posiciones en el orden de LAYOUT (W=14, F=15, ","=44, "."=45).
+# p = posiciones en el orden de LAYOUT (W=14, F=15, H=43, ","=44, "."=45).
 cat >> "$DIR/$KM.yaml" <<'EOF'
 combos:
   - {p: [14, 15], k: Esc, l: [Base]}
   - {p: [44, 45], k: ´, l: [Base]}
+  - {p: [43, 44], k: Mouse, l: [Base, Mouse]}
 EOF
 keymap -c "$DIR/keymap_drawer.yaml" draw -j "$INFO_JSON" "$DIR/$KM.yaml" > "$DIR/img/$KM.svg"
 echo "Imagen generada: $DIR/img/$KM.svg"

@@ -21,7 +21,6 @@ enum layers {
 #define M_NUM   LT(_NUM, KC_M)   // M al tocar, Números al mantener
 
 // Pulgares: tecla al tocar, capa (o Ctrl) al mantener
-#define ESC_MOU LT(_MOUSE, KC_ESC)
 #define SPC_NAV LT(_NAV, KC_SPC)
 #define TAB_CTL LCTL_T(KC_TAB)   // Tab al tocar, Ctrl al mantener
 #define ENT_SYM LT(_SYM, KC_ENT)
@@ -43,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
         TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          M_NUM,     KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
-                                         ESC_MOU,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
+                                         KC_ESC,    SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
     ),
     // Navegación (mantener Espacio): F1-F12, flechas y bootloader
     [_NAV] = LAYOUT(
@@ -69,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, ES_DQUO, ES_QUOT, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, K_GRV,   _______,
                                    _______, ES_MINS, ES_UNDS,     _______, _______, _______
     ),
-    // Mouse y multimedia (mantener el pulgar exterior izquierdo)
+    // Mouse y multimedia (combo H + , para activar y desactivar)
     [_MOUSE] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,   _______,       _______,   _______,   _______,   _______,   _______,   _______,
         _______,   _______,   _______,   _______,   KC_MPLY,   KC_VOLU,       MS_BTN5,   MS_WHLL,   MS_WHLD,   MS_WHLU,   MS_WHLR,   _______,
@@ -99,10 +98,12 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
 
 // Combos: dos teclas a la vez producen otra (para no usar el meñique)
 const uint16_t PROGMEM combo_esc[]  = {KC_W, KC_F, COMBO_END};
-const uint16_t PROGMEM combo_acut[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo_acut[]  = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo_mouse[] = {KC_H, KC_COMM, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(combo_esc,  KC_ESC),  // W + F -> Esc
-    COMBO(combo_acut, ES_ACUT), // , + . -> ´ (tecla muerta)
+    COMBO(combo_esc,   KC_ESC),     // W + F -> Esc
+    COMBO(combo_acut,  ES_ACUT),    // , + . -> ´ (tecla muerta)
+    COMBO(combo_mouse, TG(_MOUSE)), // H + , -> activar/desactivar Mouse
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
