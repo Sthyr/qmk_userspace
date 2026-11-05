@@ -11,13 +11,16 @@ enum layers {
 };
 
 // Home row mods
-#define HM_R    LALT_T(KC_R)     // R al tocar, Alt al mantener
+#define HM_A    LGUI_T(KC_A)     // A al tocar, Super al mantener
+#define HM_R   LALT_T(KC_R)     // R al tocar, Alt al mantener
 #define HM_S    LSFT_T(KC_S)     // S al tocar, Shift al mantener
 #define HM_G    MEH_T(KC_G)      // G al tocar, Meh (Ctrl+Shift+Alt) al mantener
 #define HM_E    RSFT_T(KC_E)     // E al tocar, Shift al mantener
 #define HM_I    LALT_T(KC_I)     // I al tocar, Alt al mantener
+#define HM_O    RGUI_T(KC_O)     // O al tocar, Super al mantener
 
 // Pulgares: tecla al tocar, capa (o Ctrl) al mantener
+#define ESC_MOU LT(_MOUSE, KC_ESC)
 #define SPC_NAV LT(_NAV, KC_SPC)
 #define TAB_CTL LCTL_T(KC_TAB)   // Tab al tocar, Ctrl al mantener
 #define ENT_SYM LT(_SYM, KC_ENT)
@@ -38,14 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
-        TG(_GAME), KC_A,      HM_R,      HM_S,      KC_T,      HM_G,          KC_M,      KC_N,    HM_E,      HM_I,      KC_O,      ES_SCLN,
+        TG(_GAME), HM_A,      HM_R,      HM_S,      KC_T,      HM_G,          KC_M,      KC_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_ACUT,   ES_ACUT,
-                                         KC_LGUI,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
+                                         ESC_MOU,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
     ),
-    // Navegación (mantener Espacio): F1-F12, flechas, TG de la capa Mouse y bootloader
+    // Navegación (mantener Espacio): F1-F12, flechas y bootloader
     [_NAV] = LAYOUT(
         _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, QK_BOOT,
-        TG(_MOUSE), KC_F1, KC_F2,  KC_F3,   KC_F4,   KC_F5,       _______, _______, _______, _______, _______, _______,
+        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,       _______, _______, _______, _______, _______, _______,
         _______, KC_F6,   KC_LALT, KC_LSFT, KC_LCTL, KC_F7,       KC_HOME, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,
         _______, KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,      _______, _______, _______, _______, _______, _______,
                                    _______, _______, _______,     _______, _______, _______
@@ -66,13 +69,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, ES_LBRC, ES_EQL,  ES_LBRC, K_RBRC,      KC_PMNS, KC_PSLS, ES_PIPE, ES_BSLS, K_GRV,   _______,
                                    _______, ES_MINS, ES_UNDS,     _______, _______, _______
     ),
-    // Mouse y multimedia (TG desde Navegación; TO(_BASE) para salir)
+    // Mouse y multimedia (mantener el pulgar exterior izquierdo)
     [_MOUSE] = LAYOUT(
         _______,   _______,   _______,   _______,   _______,   _______,       _______,   _______,   _______,   _______,   _______,   _______,
         _______,   _______,   _______,   _______,   KC_MPLY,   KC_VOLU,       MS_BTN5,   MS_WHLL,   MS_WHLD,   MS_WHLU,   MS_WHLR,   _______,
         _______,   _______,   _______,   KC_MSTP,   KC_MUTE,   KC_VOLD,       MS_BTN4,   MS_LEFT,   MS_DOWN,   MS_UP,     MS_RGHT,   _______,
-        _______,   _______,   _______,   MS_ACL0,   MS_ACL1,   MS_ACL2,       TO(_BASE), _______,   _______,   _______,   _______,   _______,
-                                         KC_LGUI,   _______,   _______,       MS_BTN1,   MS_BTN2,   MS_BTN3
+        _______,   _______,   _______,   MS_ACL0,   MS_ACL1,   MS_ACL2,       _______,   _______,   _______,   _______,   _______,   _______,
+                                         _______,   _______,   _______,       MS_BTN1,   MS_BTN2,   MS_BTN3
     ),
     // Juegos (TG desde la base)
     [_GAME] = LAYOUT(

@@ -4,7 +4,7 @@ layers:
   - ['-', '@', ¡, '!', ¿, '?', '', '''', '"', Menú, '', ImpPt]
   - [Esc, Q, W, F, P, B, J, L, U, Y, Ñ, Supr]
   - - {t: Juegos, h: fijar}
-    - A
+    - {t: A, h: Super}
     - {t: R, h: Alt}
     - {t: S, h: Shift}
     - T
@@ -13,10 +13,10 @@ layers:
     - N
     - {t: E, h: Shift}
     - {t: I, h: Alt}
-    - O
+    - {t: O, h: Super}
     - ;
   - [Bloq, Z, X, C, D, V, K, H, ',', ., ´, ´]
-  - - Super
+  - - {t: Esc, h: Mouse}
     - {t: ␣, h: Navegación}
     - {t: ⇥, h: Ctrl}
     - {t: ⏎, h: Símbolos}
@@ -35,7 +35,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - Boot
-  - - {t: Mouse, h: fijar}
+  - - {t: ▽, type: trans}
     - F1
     - F2
     - F3
@@ -230,13 +230,13 @@ layers:
     - Vel 0
     - Vel 1
     - Vel 2
-    - {t: Base, h: fijar}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  - - Super
+    - {t: ▽, type: trans}
+  - - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - Clic izq
