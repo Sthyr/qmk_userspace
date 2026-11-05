@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Genera la imagen del layout del keymap sthyr (Silakka54) con keymap-drawer.
+# Uso: ./draw.sh            -> crea img/sthyr.svg
+set -euo pipefail
+
+KB=silakka54
+KM=sthyr
+DIR="$(cd "$(dirname "$0")" && pwd)"
+USERSPACE="$(cd "$DIR/.." && pwd)"
+KEYMAP_C="$USERSPACE/keyboards/$KB/keymaps/$KM/keymap.c"
+QMK_HOME="${QMK_HOME:-$HOME/qmk_firmware}"
+INFO_JSON="$QMK_HOME/keyboards/$KB/keyboard.json"
+TMP="$(mktemp -d)"
+trap 'rm -rf "$TMP"' EXIT
+
+mkdir -p "$DIR/img"
+qmk c2json -q --no-cpp -kb "$KB" -km "$KM" "$KEYMAP_C" -o "$TMP/raw.json"
+python3 "$DIR/keymap_prep.py" "$KEYMAP_C" "$TMP/raw.json" > "$TMP/keymap.json"
+keymap -c "$DIR/keymap_drawer.yaml" parse -q "$TMP/keymap.json" -c 12 \
+    -l Base Navegación Números Símbolos Mouse Juegos > "$DIR/$KM.yaml"
+keymap -c "$DIR/keymap_drawer.yaml" draw -j "$INFO_JSON" "$DIR/$KM.yaml" > "$DIR/img/$KM.svg"
+echo "Imagen generada: $DIR/img/$KM.svg"

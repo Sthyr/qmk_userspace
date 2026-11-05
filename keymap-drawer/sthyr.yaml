@@ -1,0 +1,299 @@
+layout: {qmk_keyboard: silakka54, layout_name: LAYOUT}
+layers:
+  Base:
+  - ['-', '@', ¡, '!', ¿, '?', '', '''', '"', Menú, '', ImpPt]
+  - [Esc, Q, W, F, P, B, J, L, U, Y, Ñ, Supr]
+  - - {t: Juegos, h: fijar}
+    - A
+    - {t: R, h: Alt}
+    - {t: S, h: Shift}
+    - {t: T, h: Ctrl}
+    - {t: G, h: Meh}
+    - M
+    - {t: N, h: Ctrl}
+    - {t: E, h: Shift}
+    - {t: I, h: Alt}
+    - O
+    - ;
+  - [Bloq, Z, X, C, D, V, K, H, ',', ., ´, ´]
+  - - Super
+    - {t: ␣, h: Navegación}
+    - {t: ⇥, h: Mouse}
+    - {t: ⏎, h: Símbolos}
+    - ⌫
+    - {t: Supr, h: Números}
+  Navegación:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F6
+    - Alt
+    - Shift
+    - Ctrl
+    - F7
+    - Inicio
+    - ←
+    - ↓
+    - ↑
+    - →
+    - Fin
+  - - {t: ▽, type: trans}
+    - F8
+    - F9
+    - F10
+    - F11
+    - F12
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Números:
+  - - BloqNum
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '7'
+    - '8'
+    - '9'
+    - '='
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '*'
+    - '4'
+    - '5'
+    - '6'
+    - +
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - /
+    - '1'
+    - '2'
+    - '3'
+    - '-'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - ','
+    - '0'
+    - .
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+  Símbolos:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ¿
+    - '?'
+    - '{'
+    - '}'
+    - ´ suelta
+    - $
+    - '%'
+    - '&'
+    - ^
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '~'
+    - ¡
+    - '!'
+    - (
+    - )
+    - +
+    - '*'
+    - $
+    - '#'
+    - '&'
+    - AltGr
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '['
+    - '='
+    - '['
+    - ']'
+    - '-'
+    - /
+    - '|'
+    - \
+    - '`'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '-'
+    - _
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Mouse:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ▶⏸
+    - Vol+
+    - Adelante
+    - Rueda ←
+    - Rueda ↓
+    - Rueda ↑
+    - Rueda →
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ⏹
+    - Mute
+    - Vol-
+    - Atrás
+    - Mouse ←
+    - Mouse ↓
+    - Mouse ↑
+    - Mouse →
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - Vel 0
+    - Vel 1
+    - Vel 2
+    - {t: Base, h: fijar}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - Super
+    - {t: ▽, type: trans}
+    - {type: held}
+    - Clic izq
+    - Clic der
+    - Clic medio
+  Juegos:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '0'
+    - →
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - ←
+    - ↓
+    - ↑
+    - →
+    - Shift
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - ␣
+    - ⇥
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}

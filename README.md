@@ -1,5 +1,12 @@
 # QMK Userspace
 
+## Silakka54 — keymap `sthyr`
+
+![Layout Silakka54](keymap-drawer/img/sthyr.svg)
+
+Colemak-DH con home row mods, sobre distribución de sistema español latinoamericano.
+La imagen se genera con [keymap-drawer](https://github.com/caksoylar/keymap-drawer): `./keymap-drawer/draw.sh`.
+
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the [main QMK repository](https://github.com/qmk/qmk_firmware). You must still fork the main QMK repository if writing firmware for a *new* keyboard.
 
 ## Howto configure your build targets

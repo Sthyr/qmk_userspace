@@ -1,0 +1,130 @@
+# Configuración de keymap-drawer para el keymap sthyr (Silakka54).
+# Leyendas de los alias de la distribución latinoamericana (ES_*) y alias propios.
+parse_config:
+  # Home row mods definidos con #define en keymap.c
+  raw_binding_map:
+    HM_R: {t: R, h: Alt}
+    HM_S: {t: S, h: Shift}
+    HM_T: {t: T, h: Ctrl}
+    HM_G: {t: G, h: Meh}
+    HM_N: {t: N, h: Ctrl}
+    HM_E: {t: E, h: Shift}
+    HM_I: {t: I, h: Alt}
+  qmk_remove_keycode_prefix: [KC_, ES_]
+  toggle_label: fijar
+  modifier_fn_map:
+    left_ctrl: Ctrl
+    right_ctrl: Ctrl
+    left_shift: Shift
+    right_shift: Shift
+    left_alt: Alt
+    right_alt: AltGr
+    left_gui: Super
+    right_gui: Super
+    keycode_combiner: '{mods}+{key}'
+    mod_combiner: '{mod_1}+{mod_2}'
+    special_combinations:
+      left_ctrl+left_alt+left_shift: Meh
+  qmk_keycode_map:
+    'NO': ''
+    LALT: Alt
+    RALT: AltGr
+    LSFT: Shift
+    RSFT: Shift
+    LCTL: Ctrl
+    RCTL: Ctrl
+    LGUI: Super
+    MEH: Meh
+    ES_PIPE: '|'
+    ES_QUOT: ''''
+    ES_IQUE: '¿'
+    ES_ACUT: '´'
+    ES_PLUS: '+'
+    ES_NTIL: 'Ñ'
+    ES_LCBR: '{'
+    ES_RCBR: '}'
+    ES_LABK: '<'
+    ES_COMM: ','
+    ES_DOT: '.'
+    ES_MINS: '-'
+    ES_MORD: '°'
+    ES_EXLM: '!'
+    ES_DQUO: '"'
+    ES_NUMB: '#'
+    ES_DLR: '$'
+    ES_PERC: '%'
+    ES_AMPR: '&'
+    ES_SLSH: '/'
+    ES_LPRN: '('
+    ES_RPRN: ')'
+    ES_EQL: '='
+    ES_QUES: '?'
+    ES_IEXL: '¡'
+    ES_DIAE: '¨'
+    ES_ASTR: '*'
+    ES_LBRC: '['
+    ES_RBRC: ']'
+    ES_RABK: '>'
+    ES_SCLN: ';'
+    ES_COLN: ':'
+    ES_UNDS: '_'
+    ES_NOT: '¬'
+    ES_BSLS: '\'
+    ES_AT: '@'
+    ES_TILD: '~'
+    ES_CIRC: '^'
+    ES_GRV: '`'
+    K_RCBR: '}'
+    K_RBRC: ']'
+    K_GRV: '`'
+    M_ACUTE: '´ suelta'
+    KC_NO: ''
+    KC_SPC: '␣'
+    KC_BSPC: '⌫'
+    KC_DEL: 'Supr'
+    KC_ENT: '⏎'
+    KC_TAB: '⇥'
+    KC_ESC: 'Esc'
+    KC_CAPS: 'Bloq'
+    KC_PSCR: 'ImpPt'
+    KC_APP: 'Menú'
+    KC_LGUI: 'Super'
+    KC_LALT: 'Alt'
+    KC_RALT: 'AltGr'
+    KC_LSFT: 'Shift'
+    KC_LCTL: 'Ctrl'
+    KC_HOME: 'Inicio'
+    KC_END: 'Fin'
+    KC_LEFT: '←'
+    KC_RGHT: '→'
+    KC_UP: '↑'
+    KC_DOWN: '↓'
+    KC_NUM: 'BloqNum'
+    KC_PAST: '*'
+    KC_PPLS: '+'
+    KC_PMNS: '-'
+    KC_PSLS: '/'
+    KC_PEQL: '='
+    KC_COMM: ','
+    KC_DOT: '.'
+    KC_MPLY: '▶⏸'
+    KC_MSTP: '⏹'
+    KC_MUTE: 'Mute'
+    KC_VOLU: 'Vol+'
+    KC_VOLD: 'Vol-'
+    MS_UP: 'Mouse ↑'
+    MS_DOWN: 'Mouse ↓'
+    MS_LEFT: 'Mouse ←'
+    MS_RGHT: 'Mouse →'
+    MS_WHLU: 'Rueda ↑'
+    MS_WHLD: 'Rueda ↓'
+    MS_WHLL: 'Rueda ←'
+    MS_WHLR: 'Rueda →'
+    MS_BTN1: 'Clic izq'
+    MS_BTN2: 'Clic der'
+    MS_BTN3: 'Clic medio'
+    MS_BTN4: 'Atrás'
+    MS_BTN5: 'Adelante'
+    MS_ACL0: 'Vel 0'
+    MS_ACL1: 'Vel 1'
+    MS_ACL2: 'Vel 2'
