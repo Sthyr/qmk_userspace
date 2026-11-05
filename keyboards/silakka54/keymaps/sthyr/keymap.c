@@ -84,6 +84,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+// Combos: dos teclas a la vez producen otra (para no usar el meñique)
+const uint16_t PROGMEM combo_esc[]  = {KC_W, KC_F, COMBO_END};
+const uint16_t PROGMEM combo_acut[] = {KC_COMM, KC_DOT, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(combo_esc,  KC_ESC),  // W + F -> Esc
+    COMBO(combo_acut, ES_ACUT), // , + . -> ´ (tecla muerta)
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case M_ACUTE:

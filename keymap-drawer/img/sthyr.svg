@@ -355,6 +355,14 @@ path.combo {
 <a href="#Nmeros">
 <text x="0" y="24" class="key hold layer-activator">Números</text>
 </a></g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="154" y="71" width="28" height="26" class="combo"/>
+<text x="168" y="84" class="combo tap">Esc</text>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="546" y="183" width="28" height="26" class="combo"/>
+<text x="560" y="196" class="combo tap">´</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 336)" class="layer-Navegación">
