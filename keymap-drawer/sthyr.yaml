@@ -34,7 +34,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - Boot
   - - {t: Mouse, h: fijar}
     - F1
     - F2

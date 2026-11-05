@@ -127,3 +127,4 @@ parse_config:
     MS_ACL0: 'Vel 0'
     MS_ACL1: 'Vel 1'
     MS_ACL2: 'Vel 2'
+    QK_BOOT: 'Boot'
