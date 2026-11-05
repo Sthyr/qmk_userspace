@@ -7,10 +7,10 @@ layers:
     - A
     - {t: R, h: Alt}
     - {t: S, h: Shift}
-    - {t: T, h: Ctrl}
+    - T
     - {t: G, h: Meh}
     - M
-    - {t: N, h: Ctrl}
+    - N
     - {t: E, h: Shift}
     - {t: I, h: Alt}
     - O

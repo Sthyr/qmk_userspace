@@ -6,9 +6,7 @@ parse_config:
     TAB_CTL: {t: ⇥, h: Ctrl}
     HM_R: {t: R, h: Alt}
     HM_S: {t: S, h: Shift}
-    HM_T: {t: T, h: Ctrl}
     HM_G: {t: G, h: Meh}
-    HM_N: {t: N, h: Ctrl}
     HM_E: {t: E, h: Shift}
     HM_I: {t: I, h: Alt}
   qmk_remove_keycode_prefix: [KC_, ES_]

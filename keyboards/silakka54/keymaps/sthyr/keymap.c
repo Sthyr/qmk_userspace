@@ -13,9 +13,7 @@ enum layers {
 // Home row mods
 #define HM_R    LALT_T(KC_R)     // R al tocar, Alt al mantener
 #define HM_S    LSFT_T(KC_S)     // S al tocar, Shift al mantener
-#define HM_T    LCTL_T(KC_T)     // T al tocar, Ctrl al mantener
 #define HM_G    MEH_T(KC_G)      // G al tocar, Meh (Ctrl+Shift+Alt) al mantener
-#define HM_N    RCTL_T(KC_N)     // N al tocar, Ctrl al mantener
 #define HM_E    RSFT_T(KC_E)     // E al tocar, Shift al mantener
 #define HM_I    LALT_T(KC_I)     // I al tocar, Alt al mantener
 
@@ -40,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
-        TG(_GAME), KC_A,      HM_R,      HM_S,      HM_T,      HM_G,          KC_M,      HM_N,      HM_E,      HM_I,      KC_O,      ES_SCLN,
+        TG(_GAME), KC_A,      HM_R,      HM_S,      KC_T,      HM_G,          KC_M,      KC_N,    HM_E,      HM_I,      KC_O,      ES_SCLN,
         KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_ACUT,   ES_ACUT,
                                          KC_LGUI,   SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   DEL_NUM
     ),
