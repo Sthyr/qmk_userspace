@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ES_MINS,   ES_AT,     ES_IEXL,   ES_EXLM,   ES_IQUE,   ES_QUES,       XXXXXXX,   ES_QUOT,   ES_DQUO,   KC_APP,    XXXXXXX,   KC_PSCR,
         KC_ESC,    KC_Q,      KC_W,      KC_F,      KC_P,      KC_B,          KC_J,      KC_L,      KC_U,      KC_Y,      ES_NTIL,   KC_DEL,
         TG(_GAME), HM_A,      HM_R,      HM_S,      T_MOU,     HM_G,          M_NUM,     HM_N,      HM_E,      HM_I,      HM_O,      ES_SCLN,
-        KC_CAPS,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
+        CW_TOGG,   KC_Z,      KC_X,      KC_C,      KC_D,      KC_V,          KC_K,      KC_H,      KC_COMM,   KC_DOT,    ES_MINS,   ES_ACUT,
                                          KC_ESC,    SPC_NAV,   TAB_CTL,       ENT_SYM,   KC_BSPC,   KC_DEL
     ),
     // Navegación (mantener Espacio): F1-F12, flechas, atajos de Emacs y bootloader
@@ -116,6 +116,30 @@ combo_t key_combos[] = {
     COMBO(combo_acut,  ES_ACUT),    // , + . -> ´ (tecla muerta)
     COMBO(combo_mouse, TG(_MOUSE)), // H + , -> activar/desactivar Mouse
 };
+
+// Caps Word con el layout latinoamericano: qué teclas siguen en mayúsculas.
+// (La versión de QMK asume el layout de EE. UU., donde - y _ están en otra tecla.)
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Con Shift: letras, Ñ y - (que pasa a _)
+        case KC_A ... KC_Z:
+        case ES_NTIL:
+        case ES_MINS:
+            add_weak_mods(MOD_BIT(KC_LSFT));
+            return true;
+        // Sin Shift: números, borrar, _ y la tilde (para escribir CAMIÓN)
+        case KC_1 ... KC_0:
+        case KC_P1 ... KC_P0:
+        case KC_BSPC:
+        case KC_DEL:
+        case ES_UNDS:
+        case ES_ACUT:
+            return true;
+        // Cualquier otra tecla (espacio, puntuación...) apaga Caps Word
+        default:
+            return false;
+    }
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

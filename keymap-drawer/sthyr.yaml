@@ -15,7 +15,7 @@ layers:
     - {t: I, h: Alt}
     - {t: O, h: Super}
     - ;
-  - [Bloq, Z, X, C, D, V, K, H, ',', ., '-', ´]
+  - [Caps Word, Z, X, C, D, V, K, H, ',', ., '-', ´]
   - - Esc
     - {t: ␣, h: Navegación}
     - {t: ⇥, h: Ctrl}
@@ -301,3 +301,4 @@ combos:
   - {p: [14, 15], k: Esc, l: [Base]}
   - {p: [44, 45], k: ´, l: [Base]}
   - {p: [43, 44], k: Mouse, l: [Base, Mouse]}
+  - {p: [27, 32], k: Caps Word, l: [Base]}

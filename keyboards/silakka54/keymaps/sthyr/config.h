@@ -10,6 +10,9 @@
                           // (los pulgares están exentos: chordal_hold_layout en keymap.c)
 #define FLOW_TAP_TERM 150 // al escribir rápido, las teclas tap-hold se resuelven como tap
 
+// Caps Word: se activa manteniendo los dos Shift a la vez (S + E)
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 // NKRO activado por defecto (en Vial estaba activo en "Magic")
 #define NKRO_DEFAULT_ON true
 

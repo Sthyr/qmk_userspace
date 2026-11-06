@@ -48,6 +48,7 @@ parse_config:
     ES_ACUT: '´'
     ES_PLUS: '+'
     ES_NTIL: 'Ñ'
+    CW_TOGG: Caps Word
     ES_LCBR: '{'
     ES_RCBR: '}'
     ES_LABK: '<'
