@@ -13,6 +13,7 @@ parse_config:
     HM_R: {t: R, h: Alt}
     HM_S: {t: S, h: Shift}
     HM_G: {t: G, h: Meh}
+    HM_N: {t: N, h: Ctrl}
     HM_E: {t: E, h: Shift}
     HM_I: {t: I, h: Alt}
     HM_O: {t: O, h: Super}

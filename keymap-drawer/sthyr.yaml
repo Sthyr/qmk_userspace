@@ -10,7 +10,7 @@ layers:
     - {t: T, h: Mouse}
     - {t: G, h: Meh}
     - {t: M, h: Números}
-    - N
+    - {t: N, h: Ctrl}
     - {t: E, h: Shift}
     - {t: I, h: Alt}
     - {t: O, h: Super}
